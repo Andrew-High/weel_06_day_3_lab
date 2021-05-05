@@ -18,12 +18,25 @@ Cinema.prototype.filterByGenre = function (genre){
   return films;
 };
 
+// Cinema.prototype.checkForYear = function (year){
+//   const answer = this.films.find(item => item.year === year);
+//   if (answer){
+//     return true;
+//   };
+//   return false;
+// };
+
 Cinema.prototype.checkForYear = function (year){
-  const answer = this.films.find(item => item.year === year);
-  if (answer){
-    return true;
-  };
-  return false;
+  const answer = this.films.some(item => item.year === year);
+  return answer;
 };
+
+
+// Cinema.prototype.checkOverLength = function (length){
+//   const answer = this.films.filter(item => item.length > length);
+//   if (answer){
+
+//   }
+// };
 
 module.exports = Cinema;
