@@ -13,10 +13,10 @@ Cinema.prototype.findFilm = function (filmName){
   return film;
 };
 
-Cinema.prototype.filterByGenre = function (genre){
-  const films = this.films.filter(item => item.genre === genre);
-  return films;
-};
+// Cinema.prototype.filterByGenre = function (genre){
+//   const films = this.films.filter(item => item.genre === genre);
+//   return films;
+// };
 
 // Cinema.prototype.checkForYear = function (year){
 //   const answer = this.films.find(item => item.year === year);
