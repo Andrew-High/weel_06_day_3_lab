@@ -32,11 +32,23 @@ Cinema.prototype.checkForYear = function (year){
 };
 
 
-// Cinema.prototype.checkOverLength = function (length){
-//   const answer = this.films.filter(item => item.length > length);
-//   if (answer){
+Cinema.prototype.checkOverLength = function (length){
+  const answer = this.films.every(item => item.length > length);
+  return answer;
+};
 
-//   }
-// };
+Cinema.prototype.checkTotalTime = function (){
+  const answer = this.films.reduce((runningTotal, film) => {
+    return runningTotal + film.length;
+  }, 0);
+  return answer;
+};
+
+Cinema.prototype.filmsByProperty = function (property, value) {
+  const answer = this.films.filter((item) => {
+    return item[property] === value;
+  });
+  return answer;
+};
 
 module.exports = Cinema;
